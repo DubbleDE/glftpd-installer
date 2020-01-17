@@ -56,6 +56,17 @@ case $requirement in
 	*) rm -r /glftpd && rm -r .tmp ; exit 1 ;;
 esac
 
+if [ "`echo $PATH | grep /usr/sbin | wc -l`" = 0 ]
+then 
+    echo "/usr/sbin not found in environmental PATH" 
+    echo "Default PATH should be : /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+    echo "Current PATH is : `echo $PATH`"
+    echo "Correcting PATH"
+    export PATH=$PATH:/usr/sbin
+    echo "Done"
+    echo
+fi
+
 rootdir=`pwd`
 cache="$rootdir/install.cache"
 

@@ -58,7 +58,6 @@ BASH needs to be the default shell. To change from default DASH to BASH in Debia
 ``` 
 dpkg-reconfigure dash
 ``` 
-
 ## Screenshots
 
 ### Normal installation
