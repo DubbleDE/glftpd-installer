@@ -6,7 +6,7 @@ git clone https://github.com/teqnodude/glftpd-installer
 
 ## Software
 
-*  glFTPD v2.10 for Linux both 32/64 bit version
+*  glFTPD v2.10a for Linux both 32/64 bit version
 *  Eggdrop v1.8.4 Stable Release
 
 ## Scripts
@@ -50,11 +50,11 @@ The installer needs to be run as root and it has only been tested in **Debian** 
 
 List of required packages for every script to work
 
-Debian:
+**Debian**
 ``` 
 apt-get install autoconf bc curl diffutils git libflac-dev libssl-dev lm-sensors lynx make mariadb-server ncftp passwd smartmontools tcl tcl-dev tcl-tls tcpd zip
 ``` 
-BASH needs to be the default shell. To change from default DASH to BASH in Debian do 
+**BASH** needs to be the default shell. To change from default DASH to BASH in Debian do 
 ``` 
 dpkg-reconfigure dash
 ``` 
