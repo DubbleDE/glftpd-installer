@@ -46,7 +46,7 @@ git clone https://github.com/teqnodude/glftpd-installer
 
 ## Requirements
 
-The installer needs to be run as root and it has only been tested in Debian and Slackware
+The installer needs to be run as root and it has only been tested in **Debian** and **Slackware**
 
 List of required packages for every script to work
 
