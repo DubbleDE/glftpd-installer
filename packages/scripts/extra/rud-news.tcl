@@ -73,10 +73,10 @@ set news(addchan) "#personal"
 set news(addhosts) "my@host.com *@my.1337.vhost.net"
 
 ## what delay between the news in minutes (I like to have this at something odd so it moves every day), 0 disables timed announce
-set news(timer) 150
+set news(timer) 0
 
 ## what delay in minutes from loading this script till it prints the news first time, 0 disables timed announce
-set news(firstrun) 10
+set news(firstrun) 0
 
 ## headerstyle
 set news(header) "\0037\002NEWS:\002 - !news for a longer list\003"
