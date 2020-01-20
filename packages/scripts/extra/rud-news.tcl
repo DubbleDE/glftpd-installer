@@ -58,10 +58,10 @@ set news(channels) "#changeme"
 set news(showtimer) 4
 
 ## max number of news to show when triggered by !news (consider anti-flood protection)
-set news(shownotice) 10
+set news(shownotice) 20
 
 ## how many news do we display by default in reply to !news
-set news(noticedefault) 6
+set news(noticedefault) 20
 
 ## how many news to show if the user is searching for something (usually just a few matches needed)
 set news(searchdefault) 4
@@ -79,7 +79,7 @@ set news(timer) 0
 set news(firstrun) 0
 
 ## headerstyle
-set news(header) "\0037\002NEWS:\002 - !news for a longer list\003"
+set news(header) "\00313\002NEWS:\002 - !news for a longer list\003"
 
 ## dateformat (default is: 06 Nov 03:20) http://www.tcl.tk/man/tcl8.4/TclCmd/clock.htm#M6 for help
 set news(dateformat) "%d %b %H:%M"
@@ -88,7 +88,7 @@ set news(dateformat) "%d %b %H:%M"
 set news(line) "\[%time\] %user - %news"
 
 ## add news style, %user and %news are valid cookies
-set news(addstyle) "\0037\002News added by %user:\002\003 %news"
+set news(addstyle) "\00313\002News added by %user:\002\003 %news"
 
 ## text to display if nothing is found while searching, %search for the search string
 set news(nothingfound) "Sorry but nothing was found when searching for %search"

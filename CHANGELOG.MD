@@ -12,6 +12,7 @@
 - Updated packages for glFTPD to version 2.10a
 - Updated section_manager to remove line from crontab related to the creation of dated dirs if no dated sections are found.
 - Disabled timer for rud-news.tcl 
+- Changed settings for rud-news.tcl and included fitting colors to better highlight when news is added
 
 
 ## 9.6 - 2019-12-25
