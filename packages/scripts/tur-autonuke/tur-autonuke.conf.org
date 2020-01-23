@@ -27,10 +27,10 @@ EXCLUDES="PRE nfofix nfo.fix nfo.update dirfix dir.fix sample.fix samplefix repa
 ALLOWED="[Approved_by_"    # What makes release ok?
 
 #---[ Totally empty module ]---#
-TOTALLYEMPTY="FALSE"     # Check for empty folders at all?
+TOTALLYEMPTY="TRUE"     # Check for empty folders at all?
 PRENUKEEMPTY="TRUE"     # Send pre-nuke warning?
-EARLYEMPTY="1"          # Minutes before sending a per-nuke warning.
-TIMEEMPTY="10"          # Minutes before nuke.
+EARLYEMPTY="60"          # Minutes before sending a per-nuke warning.
+TIMEEMPTY="720"          # Minutes before nuke.
 EMPTYMULTIPLIER="3"     # Nuke multiplier
 EMBARRESEMPTY="TRUE"    # Send detailed nuke report.
 EMPTYHOURS="TRUE"       # Use hours in bot and log output?
@@ -40,10 +40,10 @@ EMPTYHOURS="TRUE"       # Use hours in bot and log output?
 HALFEMPTY="FALSE"        # Check for "halfempty" folders at all?
 PRENUKEHALFEMPTY="TRUE" # Send pre-nuke warning?
 EARLYHALFEMPTY="60"     # Minumum age to send pre-nuke warning.
-TIMEHALFEMPTY="360"     # Minumum age to nuke.
+TIMEHALFEMPTY="720"     # Minumum age to nuke.
 HALFEMPTYMULTIPLIER="3" # Nuke multiplier
 EMBARRESHALF="TRUE"     # Send detailed nuke report.
-EMPTYEXCLUDE=".fix.nfo .mpg .m2v .mpeg .zip .rar .r00 .r01 .mp3 .000 .001" # See README
+EMPTYEXCLUDE=".fix.nfo .mpg .m2v .mpeg .zip .rar .r00 .r01 .mp3 .000 .001 .flac" # See README
 CLEANHOURS=""          	# Hours between cleaning index file.
 HALFHOURS="TRUE"        # Use hours in bot and log output?
 
@@ -52,7 +52,7 @@ HALFHOURS="TRUE"        # Use hours in bot and log output?
 INCOMPLETE="FALSE"     	# Use symlinks nukes at all? TRUE/FALSE
 PRENUKEINCOM="TRUE"   	# Send pre-nuke warning?
 EARLYINCOM="60"      	# Minutes before sending a pre-nuke warning. 
-TIMEINCOM="360"       	# Minumum age in minutes to nuke. 
+TIMEINCOM="720"       	# Minumum age in minutes to nuke. 
 INCOMMULTIPLIER="3"   	# Nuke multiplier
 EMBARRESINCOM="TRUE"  	# Send detailed nuke report.
 SYMLINKNAMES="(incomplete)- [incomplete]- [INCOMPLETE]-"  # What does your symlinks contain.
