@@ -1715,7 +1715,7 @@ function cleanup
 		echo "0 1 * * *         	$glroot/bin/dated.sh close >/dev/null 2>&1" >> /var/spool/cron/crontabs/root
 		$glroot/bin/dated.sh >/dev/null 2>&1
 	fi
-	echo "*/5 * * * *		$glroot/bin/tur-space.sh go >/dev/null 2>&1" >> /var/spool/cron/crontabs/root
+	echo "#*/5 * * * *		$glroot/bin/tur-space.sh go >/dev/null 2>&1" >> /var/spool/cron/crontabs/root
 	touch $glroot/ftp-data/logs/tur-space.log
 	mkdir -m 777 $glroot/tmp
 	chown -R $BOTU:glftpd $glroot/sitebot
@@ -1766,6 +1766,8 @@ echo "If you are planning to uninstall glFTPD, then run cleanup.sh"
 echo
 echo "To get the bot running you HAVE to do this ONCE to create the initial userfile"
 echo "su - sitebot -c \"$glroot/sitebot/sitebot -m\""
+echo
+echo "If you want automatic cleanup of site then please review the settings in $glroot/bin/tur-space.conf and enable the line in crontab"
 echo 
 echo "All good to go and I recommend people to check the different settings for the different scripts including glFTPD itself."
 echo
