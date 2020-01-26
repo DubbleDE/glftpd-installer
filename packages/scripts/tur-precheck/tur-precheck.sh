@@ -31,7 +31,7 @@ ERROR3="There is already a .sfv in this dir. You must delete that one first."
 ERROR4="This file is already there with a different case."
 ERROR5="There is already a .nfo in this dir. You must delete that one first."
 ERROR6="This nfo file format is not allowed ($1)"
-ERROR7="You can not upload a .sfv file into a Sample or Covers dir."
+ERROR7="You can not upload a .sfv file into a Sample, Covers or Proof dir."
 ERROR8="You must upload the .sfv file first."
 
 
@@ -149,19 +149,7 @@ if [ "$NODOUBLESFV" = "TRUE" ]; then
 fi
 
 if [ "$DENY_SFV_IN_SAMPLE_DIRS" = "TRUE" ]; then
-  if [ "`echo "$PWD" | grep -i "\/sample$"`" ]; then
-    if [ "`echo "$1" | grep "\.[sS][fF][vV]$"`" ]; then
-      echo -e "$ERROR7\n"
-      exit 2
-    fi
-  fi
-  if [ "`echo "$PWD" | grep -i "\/covers$"`" ]; then
-    if [ "`echo "$1" | grep "\.[sS][fF][vV]$"`" ]; then
-      echo -e "$ERROR7\n"
-      exit 2
-    fi
-  fi
-  if [ "`echo "$PWD" | grep -i "\/proof$"`" ]; then
+  if [ "`echo "$PWD" | grep -i "\/sample$\|\/covers$\|\/proof$"`" ]; then
     if [ "`echo "$1" | grep "\.[sS][fF][vV]$"`" ]; then
       echo -e "$ERROR7\n"
       exit 2

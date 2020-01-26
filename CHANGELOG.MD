@@ -14,6 +14,7 @@
 - Disabled timer for rud-news.tcl 
 - Changed settings for rud-news.tcl and included fitting colors to better highlight when news is added
 - I've put tur-space disabled by default in crontab to avoid having entire sites wiped due to bad setup information. I've also included a message at the end of installation regarding this
+- Cosmetic code changes to tur-precheck
 
 
 ## 9.6 - 2019-12-25
