@@ -604,7 +604,7 @@ function glftpd
 	packages/scripts/tur-rules/rulesgen.sh MISC
 	cd packages
 	echo
-	echo -n "Installing $PK1DIR, please wait...           "
+	echo -n "Installing $PK1DIR, please wait...          "
 	echo "####### Here starts glFTPD scripts #######" >> /var/spool/cron/crontabs/root
 	#cd $PK1DIR ; mv -f ../data/installgl.sh ./ ; ./installgl.sh >/dev/null 2>&1
 	cd $PK1DIR && sed "s/changeme/$port/" ../data/installgl.sh.org > installgl.sh && chmod +x installgl.sh && ./installgl.sh >/dev/null 2>&1
@@ -981,7 +981,9 @@ function presystem
 	
 		git clone https://github.com/silv3rr/foo-tools >/dev/null 2>&1
 		cp -f ../../data/pre.cfg $glroot/etc
-		cd foo-tools/src
+		cd foo-tools
+		git checkout cdb77c1 >/dev/null 2>&1
+		cd src
 		./configure -q && make build >/dev/null 2>&1
 		cp pre/foo-pre $glroot/bin && chmod u+s $glroot/bin/foo-pre
 		make -s distclean
@@ -1687,6 +1689,7 @@ function cleanup
 	mv packages/$PK1DIR packages/source/
 	mv packages/$PK2DIR packages/source/
 	mv packages/$PK3DIR packages/source/
+	mv packages/scripts/eur0-pre-system/foo-tools packages/source/
 	mv $rootdir/.tmp/site/* $glroot/site/
 	cp -r packages/source/pzs-ng $glroot/backup
 	cp packages/data/pzs-ng-update.sh $glroot/backup 

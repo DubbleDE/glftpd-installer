@@ -5,6 +5,7 @@
 - Free: in statline didn't follow display_size_unit in glftpd.conf because developer forgot to implement new cookies.
 - In certain situations debian users are having an incomplete PATH variable, have implemented a check against that which corrects the PATH
 - Because new version of glFTPD is compiled against newer GLIBC_2.28 then change to glftpd-full-static is required for systems with older versions, set as default now
+- Fixed the grabbing of foo-tools by setting a specific git version since the developer of foo-tools broke foo-pre with newer version.
 
 ### Updated
 
