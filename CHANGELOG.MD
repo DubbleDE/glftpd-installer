@@ -16,6 +16,7 @@
 - I've put tur-space disabled by default in crontab to avoid having entire sites wiped due to bad setup information. I've also included a message at the end of installation regarding this
 - Cosmetic code changes to tur-precheck
 - Updated TVMaze.tcl with own code to make it use SSL and having links converted to https and also included the announce of rating
+- Updated TVMaze.tcl with own code to enable the grab of IMDB url for use, enabled IMDB url for !tv lookups
 
 
 ## 9.6 - 2019-12-25
