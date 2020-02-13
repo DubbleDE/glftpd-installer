@@ -1,5 +1,5 @@
 #!/bin/bash
-VER=1.3
+VER=1.4
 #--[ Intro ]----------------------------------------------------#
 #                                                       	#
 # Tur-predircheck_manager. A script for lazy people to block  	#
@@ -55,8 +55,8 @@ then
 	'$irctrigger' list groups - To list current blocklist for groups
 	'$irctrigger' search <release/group> - To search for a specific release / group under DENYGROUPS and DENYDIRS
 	'$irctrigger' add release <sectionname> <regexp> - To block a release in existing section on first line that matches
-        '$irctrigger' edit release <sectionname> startword <regexp> - To edit and add to existing block of words in existing section on first line that matches
-        '$irctrigger' edit release <sectionname> startword - To edit and remove existing block of word in existing section on first line that matches
+        '$irctrigger' edit section <sectionname> startword <regexp> - To edit and add to existing block of words in existing section on first line that matches
+        '$irctrigger' edit section <sectionname> startword - To edit and remove existing block of word in existing section on first line that matches
 	'$irctrigger' add newline release <sectionname> <regexp> - To block a release in an existing section on a new line
 	'$irctrigger' add newsection <oldsectionname> <newsectionname> <regexp> - To block a release in a new section on a new line with existing section as reference point
 	'$irctrigger' del release <sectionname> <regexp> - To unblock a release in specified section
@@ -112,13 +112,13 @@ then
         Adding wordblock to existing block
 
         Example: /site/0DAY:[._-](word)[._-]
-        Do: '$irctrigger' edit release 0DAY word newword
+        Do: '$irctrigger' edit section 0DAY word newword
         Result: /site/0DAY:[._-](newword|word)[._-]
 
         Removing wordblock from existing block
 
         Example: /site/0DAY:[._-](newword|word)[._-]
-        Do: '$irctrigger' edit release 0DAY newword
+        Do: '$irctrigger' edit section 0DAY newword
         Result: /site/0DAY:[._-](word)[._-]
 		
         When blocking/unblocking a group for a specific section you do this.
@@ -194,7 +194,7 @@ then
 	$glroot/bin/sed -i "/\/site\/$nsection:/ s/|$//gI" $predircheck
 fi
 
-if [[ "$ARGS" = "edit release"* ]]
+if [[ "$ARGS" = "edit section"* ]]
 then
         section=`echo $ARGS | awk -F " " '{print $3}'`
         startword=`echo $ARGS | awk -F " " '{print $4}'`

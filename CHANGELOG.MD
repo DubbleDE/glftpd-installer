@@ -18,6 +18,7 @@
 - Cosmetic code changes to tur-precheck
 - Updated TVMaze.tcl with own code to make it use SSL and having links converted to https and also included the announce of rating
 - Updated TVMaze.tcl with own code to enable the grab of IMDB url for use, enabled IMDB url for !tv lookups
+- Updated Tur-Predircheck Manager and changed command "edit release" to "edit section" since it makes more sense
 
 
 ## 9.6 - 2019-12-25
