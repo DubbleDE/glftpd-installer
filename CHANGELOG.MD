@@ -1,3 +1,10 @@
+## 9.x - 
+
+### Fixes
+
+- Tur-Predircheck_Manager had problems when editing sections where changes would occur on non-targeted sections
+
+
 ## 9.7 - 2020-02-13
 
 ### Fixes

@@ -1,5 +1,5 @@
 #!/bin/bash
-VER=1.4
+VER=1.5
 #--[ Intro ]----------------------------------------------------#
 #                                                       	#
 # Tur-predircheck_manager. A script for lazy people to block  	#
@@ -203,12 +203,12 @@ then
         if [ ! -z $regexp ]
         then
             echo "Adding wordblock $regexpc in section $section"
-            $glroot/bin/sed -i "0,/\/site\/$section:\/*.$startword/s/$startword/$regexp|$startword/" $predircheck
+            $glroot/bin/sed -i "/$section:/ s/$startword/$regexp/" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/\\|$//gI" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/||/|/gI" $predircheck
         else
             echo "Removing wordblock $startword in section $section"
-            $glroot/bin/sed -i "0,/\/site\/$section:\/*.$startword/s/\b$startword\b//" $predircheck
+            $glroot/bin/sed -i "/$section:/ s/$startword//" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/|)/)/gI" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/(|/(/gI" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/||/|/gI" $predircheck
