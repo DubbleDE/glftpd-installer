@@ -1,7 +1,6 @@
 #!/bin/bash
 VER=9.7
 clear
-cd $PWD
 
 if [ ! -d ".tmp" ]
 then

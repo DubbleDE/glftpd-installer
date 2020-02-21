@@ -203,12 +203,12 @@ then
         if [ ! -z $regexp ]
         then
             echo "Adding wordblock $regexpc in section $section"
-            $glroot/bin/sed -i "/$section:/ s/$startword/$regexp/" $predircheck
+            $glroot/bin/sed -i "/\/site\/$section:/ s/$startword/$regexp/" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/\\|$//gI" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/||/|/gI" $predircheck
         else
             echo "Removing wordblock $startword in section $section"
-            $glroot/bin/sed -i "/$section:/ s/$startword//" $predircheck
+            $glroot/bin/sed -i "/\/site\/$section:/ s/$startword//" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/|)/)/gI" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/(|/(/gI" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/||/|/gI" $predircheck
