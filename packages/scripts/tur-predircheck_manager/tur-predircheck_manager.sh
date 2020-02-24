@@ -158,7 +158,7 @@ fi
 if [[ "$ARGS" = "search"* ]]
 then
         search=`echo $ARGS | awk -F " " '{print $2}'`
-        sed -n "/DENYGROUPS/,/ALLOWDIRS/p" $predircheck | grep -i "$search"
+        sed -n "/DENYGROUPS/,/ALLOWDIRS/p" $predircheck | grep --color=always -i "$search"
 fi
 
 if [[ "$ARGS" = "add release"* ]]
