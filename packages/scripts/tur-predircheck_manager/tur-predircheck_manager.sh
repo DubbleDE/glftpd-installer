@@ -1,5 +1,5 @@
 #!/bin/bash
-VER=1.5
+VER=1.6
 #--[ Intro ]----------------------------------------------------#
 #                                                       	#
 # Tur-predircheck_manager. A script for lazy people to block  	#
@@ -198,6 +198,7 @@ if [[ "$ARGS" = "edit section"* ]]
 then
         section=`echo $ARGS | awk -F " " '{print $3}'`
         startword=`echo $ARGS | awk -F " " '{print $4}'`
+	startwordc=`echo $INPUT | awk -F " " '{print $4}'`
         regexp=`echo $ARGS | awk -F " " '{print $5}'`
         regexpc=`echo $INPUT | awk -F " " '{print $5}'`
         if [ ! -z $regexp ]
@@ -207,7 +208,7 @@ then
             $glroot/bin/sed -i "/\/site\/$section:/ s/\\|$//gI" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/||/|/gI" $predircheck
         else
-            echo "Removing wordblock $startword in section $section"
+            echo "Removing wordblock $startwordc in section $section"
             $glroot/bin/sed -i "/\/site\/$section:/ s/$startword//" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/|)/)/gI" $predircheck
             $glroot/bin/sed -i "/\/site\/$section:/ s/(|/(/gI" $predircheck

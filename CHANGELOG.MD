@@ -3,6 +3,7 @@
 ### Fixes
 
 - Tur-Predircheck_Manager had problems when editing sections where changes would occur on non-targeted sections
+- Bugfixes for Tur-Predircheck_Manager that involved leaving | at start of the line and \ in announce after removal of block
 
 ### Updated
 
