@@ -223,7 +223,7 @@ then
 	regexpc=`echo $INPUT | awk -F " " '{print $4}'`
 	echo "Unblocking $regexpc in section $section"
 	$glroot/bin/sed -i "/\/site\/$section:/ s/$regexp//g" $predircheck
-	$glroot/bin/sed -i "/\/site\/$section:/ s/\/site\/APPS:|/\/site\/$section:/gI" $predircheck
+	$glroot/bin/sed -i "/\/site\/$section:/ s/\/site\/$section:|/\/site\/$section:/gI" $predircheck
 	$glroot/bin/sed -i "/\/site\/$section:/ s/|$//gI" $predircheck
 	$glroot/bin/sed -i "/\/site\/$section:/ s/||/|/gI" $predircheck
 fi
