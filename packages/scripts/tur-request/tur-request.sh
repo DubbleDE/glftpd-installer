@@ -731,7 +731,7 @@ proc_checkold() {
           OUTPUT="$STATUSANNOUNCE"
           IRCOUTPUT="TRUE"
           proc_cookies
-          proc_output "$OUTPUT $REAL_POSITION $RELEASE has been deleted because its older than $removedays days."
+          proc_output "$OUTPUT $REAL_POSITION $RELEASE has been deleted because it's older than $removedays days."
         fi
         if [ -d "$requests/$requesthead$RELEASE" ]; then
           #rmdir "$requests/$requesthead$RELEASE" >/dev/null 2>&1
