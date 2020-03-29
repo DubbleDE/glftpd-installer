@@ -726,7 +726,7 @@ function glftpd
 	chmod 777 $glroot/ftp-data/msgs
 	cp ../scripts/extra/update_perms.sh $glroot/bin
 	cp ../scripts/extra/glftpd-version_check.sh $glroot/bin
-	echo "0 * * * *              $glroot/bin/glftpd-version_check.sh >/dev/null 2>&1" >> /var/spool/cron/crontabs/root
+	echo "0 18 * * *               $glroot/bin/glftpd-version_check.sh >/dev/null 2>&1" >> /var/spool/cron/crontabs/root
 	cp ../scripts/section_manager/section_manager.sh $glroot
 	sed -i "s|changeme|$device|" $glroot/section_manager.sh
 	chown -R root:root $glroot/bin
@@ -925,7 +925,9 @@ function pzsng
 	cp sitebot/ngB* $glroot/sitebot/scripts/pzs-ng/
 	cp -r sitebot/modules $glroot/sitebot/scripts/pzs-ng/
 	cp -r sitebot/plugins $glroot/sitebot/scripts/pzs-ng/
-	cp sitebot/themes/*.zst $glroot/sitebot/scripts/pzs-ng/themes/
+	cp -r sitebot/themes $glroot/sitebot/scripts/pzs-ng/
+	cp ../data/glftpd.installer.zst $glroot/sitebot/scripts/pzs-ng/themes
+	cp ../data/ngBot.vars $glroot/sitebot/scripts/pzs-ng
 	cp -f ../data/sitewho.conf $glroot/bin
 	cd ../scripts
 	chmod u+s $glroot/bin/cleanup

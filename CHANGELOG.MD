@@ -12,6 +12,7 @@
 ### Updated
 
 - Enabled highlight for matches during search of block in Tur-Predircheck_Manager
+- Changed color for glFTPd version check announce and had the check changed to once a day instead of every hour to avoid spam
 
 
 ## 9.7 - 2020-02-13
