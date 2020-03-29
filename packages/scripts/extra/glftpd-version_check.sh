@@ -7,7 +7,7 @@ curversion=`/glftpd/bin/glftpd-full-static | grep glFTPd | sed -e 's/(.*//' -e '
 if [ "$newversion" != "$curversion" ]
 then
     echo "New version available: $newversion"
-    echo `date "+%a %b %e %T %Y"` GL: \"There is a new glFTPd version available: $newversion - https://glftpd.io\" >> $gllog
+    echo `date "+%a %b %e %T %Y"` GLVERSION: \"There is a new glFTPd version available: $newversion - Current version: $curversion - https://glftpd.io\" >> $gllog
 else
     echo "Current version up to date"
 fi
