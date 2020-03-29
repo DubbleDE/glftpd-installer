@@ -1,5 +1,9 @@
 ## 9.x - 
 
+### Added
+
+- Added my own glFTPd version check to theme that runs in crontab and announce if and when new version is available to staffchan
+
 ### Fixes
 
 - Tur-Predircheck_Manager had problems when editing sections where changes would occur on non-targeted sections
