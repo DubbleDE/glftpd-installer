@@ -119,7 +119,7 @@ else
                         echo -en " |${COLOR1} $duration${COLOR2}"
                         obitrate=`cat $TMPFILE | sed -n '/General/,/Video/p' | grep -v "Overall bit rate mode" | grep "Overall bit rate" | cut -d ":" -f2 | sed 's/ //'`
                         if [ "$obitrate" ]; then echo -en " | Overall:${COLOR1} $obitrate${COLOR2}" ; fi
-                        vbitrate=`cat $TMPFILE | sed -n '/Video/,/Forced/p' | grep "^Bit rate  " | cut -d ":" -f2 | sed 's/ //'`
+                        vbitrate=`cat $TMPFILE | sed -n '/Video/,/Audio/p' | grep "^Bit rate  " | cut -d ":" -f2 | sed 's/ //'`
                         if [ "$vbitrate" ]; then echo -en " | Video:${COLOR1} $vbitrate${COLOR2}" ; fi
                         nbitrate=`cat $TMPFILE | sed -n '/Video/,/Forced/p' | grep "^Nominal bit rate  " | cut -d ":" -f2 | sed 's/ //'`
                         if [ "$nbitrate" ]; then  echo -en " | Video Nominal:${COLOR1} $nbitrate${COLOR2}" ; fi
