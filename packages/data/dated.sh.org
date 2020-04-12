@@ -7,8 +7,8 @@
 
 today=`date +%m%d`                      # 1231
 yesterday=`date --date "-1 day" +%m%d`  # 1230
-gllog=/glftpd/ftp-data/logs/glftpd.log  # path to glftpd.log
 glroot=/glftpd                          # path to glftpd
+gllog=$glroot/ftp-data/logs/glftpd.log  # path to glftpd.log
 sections="
 "
 
