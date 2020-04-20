@@ -3,6 +3,7 @@
 ### Added
 
 - Added my own glFTPd version check to theme that runs in crontab and announce if and when new version is available to staffchan
+- Added mkv_check to avoid bad and incomplete samples being uploaded to sample folders
 
 ### Fixes
 
