@@ -9,6 +9,8 @@
 - Tur-Predircheck_Manager had problems when editing sections where changes would occur on non-targeted sections
 - Bugfixes for Tur-Predircheck_Manager that involved leaving | at start of the line and \ in announce after removal of block
 - Fixed grep line for sections in tur-predircheck to better managing sections with similar names
+- Changed file extension from .zst to .theme on pzs-ng theme file since certain editors like midnight commander couldn't edit the file because of extension
+
 
 ### Updated
 
