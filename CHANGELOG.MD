@@ -14,6 +14,7 @@
 
 - Enabled highlight for matches during search of block in Tur-Predircheck_Manager
 - Changed color for glFTPd version check announce and had the check changed to once a day instead of every hour to avoid spam
+- Added code to tur-request that checks new requests against dirlog to prevent requests of things that are already on site
 
 
 ## 9.7 - 2020-02-13

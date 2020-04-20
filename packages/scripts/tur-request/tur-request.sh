@@ -38,6 +38,7 @@ else
   reqfile=$glroot$reqfile
   tmp=$glroot$tmp
   tuls=$glroot$tuls
+  dirloglist_gl=$glroot/bin/dirloglist
   passwd=$glroot$passwd
   passchk=$glroot$passchk
   if [ "$msgsdir" ]; then
@@ -847,6 +848,15 @@ proc_request() {
       echo "$OUTPUT"
       exit 0
     fi
+  fi
+
+  if [ "`$dirloglist_gl | grep -iv "STATUS: 3" | grep "/$WHAT$"`" ]; then
+    if [ "$mode" = "gl" ]; then
+        echo "Release already exist on site: `$dirloglist_gl | grep -iv "STATUS: 3" | grep "/$WHAT$" | tr -s "[:blank:]" "-" | sed 's/STATUS:-[0-2]-DIRNAME:-\/site//'`"
+    else
+        echo "14Release already exist on site: 4`$dirloglist_gl | grep -iv "STATUS: 3" | grep "/$WHAT$" | tr -s "[:blank:]" "-" | sed 's/STATUS:-[0-2]-DIRNAME:-\/site//'`"
+    fi
+    exit 0
   fi
 
   ## Is it already requested in file ? This one needs work to recognize . as a char.
