@@ -15,7 +15,7 @@ NUKE_PREFIX=""
 
 DIRLOGLIST_GL="/bin/dirloglist_gl"
 
-SKIPDIRS="^sample$|^Dis[ck][0-9].*|^vobsub.*|^extra.*|^cover.*|^sub.*|^subs$|^bonus.*|^approved$|^allowed$|^ac3.*|^xvid\.decoder.*|^oggdec.*|^trailer.*|^CD[0-9]|^proof$|^DVD[0-9]|^Tools$"
+SKIPDIRS="^sample$|^Dis[ck][0-9]$|^vobsub$|^extra$|^cover$|^sub$|^subs$|^bonus$|^approved$|^allowed$||^CD[0-9]$|^proof$|^DVD[0-9]$|^Tools$|^Covers$"
 
 ALLOWFILE=/tmp/tur-predircheck.allow
 
